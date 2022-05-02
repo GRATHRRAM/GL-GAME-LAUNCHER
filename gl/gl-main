@@ -1,0 +1,95 @@
+#!/bin/bash
+while [ true ]
+do
+clear
+echo "GL - inter face prototype: one"
+echo
+echo "1.start game"
+echo "2.download game"
+echo "3.about"
+echo "4.exit"
+read -n 1 usr
+if [ $usr = "1" ]
+then
+clear
+cat list
+echo
+echo "type name of game"
+echo "to exit type exit"
+read usr
+if [ $usr = "exit" ]
+then
+echo ok
+elif [ $usr = "greed" ]
+then
+greed
+elif [ $usr = "zangband" ]
+then
+zangband
+elif [ $usr = "bastet" ]
+then
+bastet
+elif [ $usr = "atc" ]
+then
+atc
+elif [ $usr = "moonbuggy" ]
+then
+moon-buggy
+elif [ $usr = "nsnake" ]
+then
+nsnake
+else
+echo "what??"
+read -n 1 -t 2 $usr
+fi
+elif [ $usr = "2" ]
+then
+clear
+cat list
+echo
+echo "type name of game to download"
+echo "type exit to exit"
+read usr
+if [ $usr = "exit" ]
+then
+echo
+elif [ $usr = "greed" ]
+then
+apt-get install greed -y
+elif [ $usr = "zangband" ]
+then
+apt-get install zangband -y
+elif [ $usr = "bastet" ]
+then
+apt-get install bastet -y
+elif [ $usr = "atc" ]
+then
+apt-get install atc -y
+elif [ $usr = "moonbuggy" ]
+then
+apt-get install moon-buggy -y
+elif [ $usr = "nsnake" ]
+then
+sudo apt-get install nsnake -y
+elif [ $usr = "nlnvaders" ]
+then
+echo "sory but it not work : ( i fix nlnvaders soon i think so :|"
+read usr
+else
+clear
+echo "what ???"
+read -n 1 -t 2 usr
+fi
+elif [ $usr = "3" ]
+then
+clear
+echo GL - Game louncher
+echo "V: one (prototype)"
+echo ": )"
+read -n 1 usr
+elif [ $usr = "4" ]
+then
+clear
+exit
+fi
+done

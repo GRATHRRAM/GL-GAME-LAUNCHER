@@ -1,0 +1,61 @@
+#!/bin/bash
+cd /usr/gl
+a=$1
+b=$2 #game install--------------------------------------------------------------------
+if [ $a = "ins" ] && [ $b = "greed" ]
+then
+apt-get install greed
+elif [ $a = "ins" ] && [ $b = "bastet" ]
+then
+apt-get install bastet
+elif [ $a = "ins" ] && [ $b = "nsnake" ]
+then
+sudo apt-get install nsnake
+elif [ $a = "ins" ] && [ $b = "zangband" ]
+then
+apt-get install zangband
+elif [ $a = "ins" ] && [ $b = "atc" ]
+then
+apt-get install bsdgames
+elif [ $a = "ins" ] && [ $b = "moonbuggy" ]
+then
+apt-get install moonbuggy
+elif [ $a = "ins" ] && [ $b = "nlnvaders" ]
+then
+apt-get install nlnvaders
+elif [ $a = "greed" ] #game start -----------------------------------------------------------------------
+then
+greed
+elif [ $a = "bastet" ]
+then
+bastet
+elif [ $a = "nsnake" ]
+then
+nsnake
+elif [ $a = "zangband" ]
+then
+zangband
+elif [ $a = "atc" ]
+then
+atc
+elif [ $a = "moonbuggy" ]
+then
+moonbuggy
+elif [ $a = "nlnvaders" ]
+then
+nlnvaders
+elif [ $a = "list" ] #other ====================================================
+then
+cat list
+elif [ $a = "help" ]
+then
+cat help
+elif [ $a = "setup" ]
+then
+./setup
+elif [ -z "$a" ]
+then
+./gl-main
+else
+echo "what??? type help!"
+fi

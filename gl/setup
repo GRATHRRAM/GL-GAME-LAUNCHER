@@ -1,0 +1,13 @@
+#!/bin/bash 
+rm /usr/gl/gl
+chmod +x greed.ins
+chmod +x gl-main
+cd gldir
+chmod +x gl
+cd ..
+rm /bin/gl
+cp gldir/gl /bin
+cd ..
+cp gl /usr -r
+rm /usr/gl/gl
+echo "done!"

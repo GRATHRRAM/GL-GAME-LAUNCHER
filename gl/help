@@ -1,0 +1,9 @@
+if you install games turn on gl on root!
+gl ins - <game name> to install games
+gl <game name> - openig game
+gl help - show this menu
+gl list - showing games list
+gl setup - setting up all
+gl - starting gl menu
+
+program made in bash by GRATHRRAM
